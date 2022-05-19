@@ -13,6 +13,7 @@ jobs:
     steps:
     - run: |
         echo PR #${{ github.event.number }} has been merged
+        echo HEAD-sha: ${{ github.event.pull_request.head.sha }}
 
   close_job:
     # this job will only run if the PR has been closed without being merged
